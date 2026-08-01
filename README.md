@@ -1,141 +1,155 @@
-# Healthcare Data Analytics Project
+# 🏥 Hospital Performance & Patient Analytics
 
-## Overview
-
-This project demonstrates an end-to-end **Data Analytics workflow** using Python, PostgreSQL, and Power BI. The objective is to analyze a healthcare dataset, uncover meaningful insights through exploratory data analysis (EDA) and SQL queries, and present the findings using an interactive Power BI dashboard. The project also includes a detailed analytical report and presentation created with Gamma.
-
-The workflow covers the complete analytics lifecycle—from data cleaning and preprocessing to visualization and business insights.
+An end-to-end **Healthcare Data Analytics** project that analyzes hospital performance, patient demographics, healthcare costs, and treatment patterns using **Python, PostgreSQL, and Power BI**. The project transforms raw healthcare data into actionable insights through data cleaning, exploratory data analysis (EDA), SQL-based business analysis, and an interactive Power BI dashboard. 
 
 ---
 
-## Dataset
+# 📌 Overview
 
-The project uses a healthcare dataset containing patient demographics, hospital information, medical conditions, billing details, admission records, medications, insurance providers, and test results.
+This project analyzes a healthcare dataset containing approximately **56,000 patient records** to identify trends in patient admissions, medical conditions, hospital performance, billing, insurance coverage, and treatment patterns.
 
-**Key attributes include:**
+The project follows a complete analytics workflow:
 
-* Patient Name
-* Age
-* Gender
-* Blood Type
-* Medical Condition
-* Hospital
-* Doctor
-* Admission Type
-* Admission Date
-* Discharge Date
-* Billing Amount
-* Insurance Provider
-* Medication
-* Test Results
+* Data loading and preprocessing using Python
+* Exploratory Data Analysis (EDA)
+* Data cleaning and feature engineering
+* SQL-based business analysis using PostgreSQL
+* Interactive dashboard development in Power BI
+* Report documentation
+* Presentation creation using Gamma
+
+The goal is to demonstrate an end-to-end data analytics workflow while generating meaningful business insights for healthcare decision-making. 
 
 ---
 
-## Tools & Technologies
+# 📂 Dataset
 
-* **Python**
+The dataset consists of approximately **56,000 healthcare records** with information on:
 
-  * Pandas
-  * NumPy
-  * Matplotlib
-  * Seaborn
+* Patient Demographics
 
-* **PostgreSQL**
+  * Name
+  * Age
+  * Gender
+  * Blood Group
+  * Age Group
 
-  * Data Storage
-  * SQL Queries
-  * Data Analysis
+* Medical Information
 
-* **Power BI**
+  * Medical Condition
+  * Medication
+  * Test Results
 
-  * Interactive Dashboard
-  * KPI Cards
-  * Data Visualization
+* Hospital Information
 
-* **Gamma**
+  * Hospital Name
+  * Admission Type
+  * Length of Stay
 
-  * Presentation Creation
+* Financial Information
 
-* **Jupyter Notebook**
+  * Billing Amount
+  * Insurance Provider
 
-  * Data Cleaning & EDA
+* Time Information
+
+  * Date of Admission
+  * Discharge Date
+  * Season
+
+Additional features such as **Age Group**, **Length of Stay**, and **Season** were created during preprocessing to support deeper analysis. 
 
 ---
 
-## Project Workflow
+# 🛠 Tools & Technologies
 
-### 1. Data Loading
+| Category           | Tools                              |
+| ------------------ | ---------------------------------- |
+| Programming        | Python                             |
+| Libraries          | Pandas, NumPy, Matplotlib, Seaborn |
+| Database           | PostgreSQL                         |
+| Data Visualization | Power BI                           |
+| Notebook           | Jupyter Notebook                   |
+| Presentation       | Gamma                              |
+
+---
+
+# 📊 Project Workflow
+
+## 1. Data Loading
 
 * Imported the healthcare dataset into Python.
 * Inspected the dataset structure and data types.
 
-### 2. Data Cleaning
+---
 
-* Handled missing values.
-* Removed duplicates.
-* Converted data types.
-* Created new features such as:
+## 2. Data Cleaning
 
-  * Age Groups
-  * Length of Stay
-  * Month
-  * Month Name
-  * Season
+Performed preprocessing to improve data quality by:
 
-### 3. Exploratory Data Analysis (EDA)
-
-Performed exploratory analysis to identify trends and patterns, including:
-
-* Patient distribution by age and gender
-* Disease frequency
-* Billing amount distribution
-* Insurance provider analysis
-* Hospital performance
-* Seasonal admission trends
-* Length of hospital stay
-* Medication usage
-
-### 4. SQL Analysis (PostgreSQL)
-
-Loaded the cleaned dataset into PostgreSQL and answered business questions using SQL.
-
-Some of the analyses include:
-
-* Patient distribution by age and gender
-* Most common medical conditions
-* Diseases with the highest healthcare costs
-* Average hospital stay by medical condition
-* Insurance provider analysis
-* Admission type distribution
-* Test result distribution
-* Most prescribed medications
-* Hospital-wise patient and billing analysis
-* Monthly and seasonal admission trends
-
-### 5. Power BI Dashboard
-
-Built an interactive dashboard to visualize key business insights using:
-
-* KPI Cards
-* Bar Charts
-* Line Charts
-* Donut Charts
-* Column Charts
-* Slicers
-* Interactive Filters
-
-### 6. Reporting & Presentation
-
-* Prepared a detailed project report.
-* Created a professional presentation using Gamma summarizing methodology, analysis, dashboard, and key insights.
+* Removing duplicate records
+* Converting admission and discharge dates to datetime format
+* Standardizing column names
+* Verifying categorical data consistency
 
 ---
 
-## Dashboard Features
+## 3. Feature Engineering
 
-The Power BI dashboard provides:
+Created new analytical features including:
 
-### KPIs
+* Age Group
+* Length of Stay
+* Month
+* Month Name
+* Season
+
+These features enabled more effective segmentation and trend analysis. 
+
+---
+
+## 4. Exploratory Data Analysis (EDA)
+
+Performed exploratory analysis to understand patient characteristics and healthcare trends, including:
+
+* Patient distribution by age and gender
+* Frequency of medical conditions
+* Billing amount analysis
+* Insurance provider analysis
+* Hospital performance
+* Admission trends
+* Seasonal patterns
+* Medication usage
+* Test result distribution
+
+---
+
+## 5. SQL Analysis (PostgreSQL)
+
+The cleaned dataset was imported into PostgreSQL to answer business questions using SQL.
+
+### Business Questions
+
+* What is the distribution of patients by age and gender?
+* Which medical conditions are most common?
+* Which diseases generate the highest healthcare costs?
+* Which conditions require longer hospitalization?
+* Which insurance providers cover the most patients and highest billing amounts?
+* What percentage of admissions are Emergency, Urgent, or Elective?
+* What proportion of patients have Normal, Abnormal, or Inconclusive test results?
+* Which medications are prescribed most frequently?
+* Which hospitals treat the most patients and generate the highest billing?
+* How do admissions change over time? Are there seasonal patterns? 
+
+---
+
+# 📈 Power BI Dashboard
+
+A **two-page interactive dashboard** was developed to visualize healthcare insights.
+
+## Dashboard 1 – Executive Dashboard
+
+### KPI Cards
 
 * Total Patients
 * Total Revenue
@@ -146,15 +160,10 @@ The Power BI dashboard provides:
 ### Visualizations
 
 * Patient Distribution by Age Group & Gender
-* Medical Condition Analysis
 * Billing Amount by Medical Condition
-* Average Hospital Stay
+* Patient Count by Medical Condition
+* Average Stay by Medical Condition
 * Admission Type Distribution
-* Insurance Provider Analysis
-* Hospital Performance
-* Medication Analysis
-* Test Result Distribution
-* Monthly & Seasonal Admission Trends
 
 ### Interactive Filters
 
@@ -167,45 +176,94 @@ The Power BI dashboard provides:
 
 ---
 
-## Key Results
+## Dashboard 2 – Trends & Operational Insights
 
-The analysis provided several actionable insights, including:
+### Visualizations
 
-* Identification of the most common medical conditions.
-* Diseases associated with the highest healthcare costs.
-* Medical conditions requiring longer hospitalization.
-* Distribution of patient admissions across different admission types.
-* Insurance providers covering the largest patient population.
-* Seasonal and monthly trends in hospital admissions.
-* Hospital-wise patient load and revenue generation.
-* Frequently prescribed medications and overall test result patterns.
+* Monthly Admission Trend
+* Seasonal Admission Pattern
+* Hospital Revenue Comparison
+* Insurance Provider Distribution
+* Test Result Distribution
+* Most Prescribed Medications
 
-These insights can support data-driven decision-making for healthcare management and operational planning.
+The dashboards enable users to interactively explore patient demographics, hospital performance, healthcare costs, and operational trends. 
 
 ---
 
-## How to Run
+# 📈 Key Insights
+
+The analysis revealed several important healthcare insights:
+
+* Cancer generated the highest overall healthcare billing.
+* Alzheimer's patients had the longest average hospital stays.
+* Patient admissions varied across different seasons.
+* Hospital revenues were relatively similar across institutions.
+* Insurance providers contributed significantly to hospital revenue.
+* Frequently prescribed medications highlighted treatment trends and inventory requirements. 
+
+---
+
+# 📁 Project Structure
+
+```text
+Hospital-Performance-and-Patient-Analytics/
+│
+├── Dataset/
+│   └── healthcare_data.csv
+│
+├── Python/
+│   ├── data_cleaning.ipynb
+│   ├── eda.ipynb
+│
+├── SQL/
+│   └── healthcare_analysis.sql
+│
+├── PowerBI/
+│   └── Hospital_Performance_Dashboard.pbix
+│
+├── Report/
+│   └── Hospital_Performance_Report.pdf
+│
+├── Presentation/
+│   └── Gamma_Presentation.pdf
+│
+├── Images/
+│   └── dashboard_preview.png
+│
+└── README.md
+```
+
+---
+
+# 🚀 How to Run
 
 1. Clone this repository.
-2. Open the Jupyter Notebook files and install the required Python libraries.
-3. Run the data cleaning and EDA notebooks.
-4. Import the cleaned dataset into PostgreSQL and execute the SQL queries.
-5. Open the Power BI dashboard (`.pbix`) and refresh the data connection.
-6. Review the report and presentation for a summary of the findings.
+2. Install the required Python libraries.
+3. Open and run the Jupyter Notebook files for data cleaning and EDA.
+4. Import the cleaned dataset into PostgreSQL.
+5. Execute the SQL queries to perform business analysis.
+6. Open the Power BI (`.pbix`) file and refresh the data source.
+7. Explore the interactive dashboards and review the accompanying report and presentation.
 
 ---
 
-## Future Improvements
+# 💡 Business Recommendations
 
-* Build a machine learning model to predict patient outcomes or healthcare costs.
-* Integrate live database connectivity for real-time dashboard updates.
-* Add advanced Power BI features such as drill-through pages, bookmarks, and custom tooltips.
-* Deploy the dashboard to the Power BI Service for online sharing.
+Based on the analysis:
+
+* Strengthen preventive healthcare initiatives for chronic diseases such as Diabetes and Heart Disease.
+* Allocate additional resources for conditions with longer hospital stays, such as Alzheimer's disease.
+* Optimize treatment planning and insurance partnerships to manage high-cost conditions like Cancer.
+* Improve seasonal staffing and inventory planning based on admission trends.
+* Monitor hospital performance using revenue, patient volume, and operational metrics to support continuous improvement. 
 
 ---
 
-## Author
+# 👩‍💻 Author
 
 **Shrijoni Dey**
 
-**Project:** Healthcare Data Analytics using **Python, PostgreSQL, and Power BI**
+**Project:** *Hospital Performance & Patient Analytics*
+
+**Tech Stack:** Python • PostgreSQL • Power BI • Jupyter Notebook • Gamma
